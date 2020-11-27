@@ -1,3 +1,6 @@
 .pro.user
 *.user
 *.user
+*.png
+*.mp3
+*.qrc
