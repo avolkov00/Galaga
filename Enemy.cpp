@@ -24,7 +24,6 @@ Enemy::Enemy(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
     // start the timer
     timer->start(50);
 }
-
 void Enemy::move(){
     // move enemy down
     setPos(x(),y()+5);
