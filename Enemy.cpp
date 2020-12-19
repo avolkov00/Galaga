@@ -2,7 +2,7 @@
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QList>
-#include <stdlib.h> // rand() -> really large int
+#include <stdlib.h>
 #include "Game.h"
 
 extern Game * game;

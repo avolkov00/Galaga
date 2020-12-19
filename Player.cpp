@@ -14,7 +14,7 @@ Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
 }
 
 void Player::keyPressEvent(QKeyEvent *event){
-    // move the player left and right
+    // move the player left and right, up and down
     if (event->key() == Qt::Key_Left){
         if (pos().x() > 0)
         setPos(x()-10,y());
