@@ -29,7 +29,7 @@ void Enemy::move(){
     setPos(x(),y()+5);
 
     // destroy enemy when it goes out of the screen
-    if (pos().y() > 600){
+    if (pos().y() > 620){
         //decrease the health
         game->health->decrease();
 

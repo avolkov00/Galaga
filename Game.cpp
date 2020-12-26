@@ -7,6 +7,7 @@
 #include <QBrush>
 #include <QImage>
 
+
 Game::Game(QWidget *parent){
     // create the scene
     scene = new QGraphicsScene();
@@ -35,10 +36,11 @@ Game::Game(QWidget *parent){
     health = new Health();
     health->setPos(health->x(),health->y()+25);
     scene->addItem(health);
-
     // spawn enemies
     QTimer * timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),health,SLOT(checkHealth()));
     QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
+   // QObject::connect(timer,SIGNAL(timeout()),health,SLOT(checkHealth()));
     timer->start(2000);
 /* Add later
     // play background music
@@ -48,3 +50,5 @@ Game::Game(QWidget *parent){
 */
     show();
 }
+
+

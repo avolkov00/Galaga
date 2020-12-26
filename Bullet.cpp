@@ -5,7 +5,7 @@
 #include "Enemy.h"
 #include "Game.h"
 
-extern Game * game; // there is an external global object called game
+extern Game * game;
 
 Bullet::Bullet(QGraphicsItem *parent): QObject(), QGraphicsPixmapItem(parent){
     // draw graphics

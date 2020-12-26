@@ -28,7 +28,7 @@ void Player::keyPressEvent(QKeyEvent *event){
         setPos(x(),y()-10);
     }
     else if (event->key() == Qt::Key_Down){
-        if (pos().y() + 100 < 1000)
+        if (pos().y() + 100 < 620)
         setPos(x(),y()+10);
     }
     // shoot with the spacebar

@@ -23,7 +23,8 @@ SOURCES += \
     Health.cpp \
     Player.cpp \
     Score.cpp \
-    main.cpp
+    main.cpp \
+    mainwindow.cpp
 
 HEADERS += \
     Bullet.h \
@@ -31,7 +32,8 @@ HEADERS += \
     Game.h \
     Health.h \
     Player.h \
-    Score.h
+    Score.h \
+    mainwindow.h
 
 
 
@@ -44,3 +46,6 @@ DISTFILES +=
 
 RESOURCES += \
     res.qrc
+
+FORMS += \
+    mainwindow.ui
