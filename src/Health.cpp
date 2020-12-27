@@ -26,6 +26,7 @@ void Health::checkHealth(){
     if (game->health->getHealth()<=0){
 
         QMessageBox::StandardButton reply;
+        game->pause=true;
         reply = QMessageBox::question(game, "You lose!", ("    Your score is " + QString::number(game->score->getScore())+  "\nWould you like to try again?"),
                                                           QMessageBox::Yes | QMessageBox::No);
         //ask for restarting the game

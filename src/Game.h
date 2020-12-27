@@ -16,6 +16,7 @@ public:
     Player * player;
     Score * score;
     Health * health;
+    bool pause = false;
 
 };
 
