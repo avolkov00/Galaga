@@ -1,8 +1,5 @@
-.pro.user
-*.user
-*.user
-
-
-
-*.user
 *.autosave
+*.dll
+*.exe
+*.qm
+*.user
