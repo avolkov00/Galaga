@@ -4,13 +4,17 @@
 #include "Bullet.h"
 #include "Enemy.h"
 
-Player::Player(QGraphicsItem *parent): QGraphicsRectItem(parent){
+Player::Player(QGraphicsItem *parent): QGraphicsPixmapItem(parent){
+    // set bullet sound
     bulletsound = new QMediaPlayer();
-    bulletsound->setMedia(QUrl("qrc:/sounds/bullet.wav"));
+    bulletsound->setMedia(QUrl("qrc:/sounds/bullet.mp3"));
+
+    // set graphic
+    setPixmap(QPixmap(":/images/player.png"));
 }
 
 void Player::keyPressEvent(QKeyEvent *event){
-    // move the player left and right
+    // move the player left and right, up and down
     if (event->key() == Qt::Key_Left){
         if (pos().x() > 0)
         setPos(x()-10,y());
@@ -19,11 +23,19 @@ void Player::keyPressEvent(QKeyEvent *event){
         if (pos().x() + 100 < 800)
         setPos(x()+10,y());
     }
+    else if (event->key() == Qt::Key_Up){
+        if (pos().y() > -1000)
+        setPos(x(),y()-10);
+    }
+    else if (event->key() == Qt::Key_Down){
+        if (pos().y() + 100 < 620)
+        setPos(x(),y()+10);
+    }
     // shoot with the spacebar
     else if (event->key() == Qt::Key_Space){
         // create a bullet
         Bullet * bullet = new Bullet();
-        bullet->setPos(x(),y());
+        bullet->setPos(x()+45,y());
         scene()->addItem(bullet);
 
         // play bulletsound

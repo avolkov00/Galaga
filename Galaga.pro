@@ -17,21 +17,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    Bullet.cpp \
-    Enemy.cpp \
-    Game.cpp \
-    Health.cpp \
-    Player.cpp \
-    Score.cpp \
-    main.cpp
+    src\Bullet.cpp \
+    src\Enemy.cpp \
+    src\Game.cpp \
+    src\Health.cpp \
+    src\Player.cpp \
+    src\Score.cpp \
+    src\main.cpp \
+    src\mainwindow.cpp
 
 HEADERS += \
-    Bullet.h \
-    Enemy.h \
-    Game.h \
-    Health.h \
-    Player.h \
-    Score.h
+    src\Bullet.h \
+    src\Enemy.h \
+    src\Game.h \
+    src\Health.h \
+    src\Player.h \
+    src\Score.h \
+    src\mainwindow.h
 
 
 
@@ -39,3 +41,11 @@ HEADERS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
+
+RESOURCES += \
+    src\res.qrc
+
+FORMS += \
+    src\mainwindow.ui

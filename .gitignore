@@ -1,4 +1,6 @@
-
+*.autosave
 *.dll
 *.exe
 *.qm
+*.user
+
